@@ -17,7 +17,7 @@ make
 
 ## Features
 
- - [ ] Tile, line abd block tiling brushes.
+ - [ ] Tile, line and block tiling brushes.
  - [ ] Tile palettes with terrain data that describes the adjacent bitmap that maps to each tile type.
  - [ ] Hierarchical sceen graph for determining render precedence and parenting.
  - [ ] Resizable and repositional nodes on the sceen graph.
