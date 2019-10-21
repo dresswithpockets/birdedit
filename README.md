@@ -23,5 +23,4 @@ make
  - [ ] Resizable and repositional nodes on the sceen graph.
  - [ ] Node latching; nodes latch onto sides of a parent node (child node latches onto a side of parent node and is always anchored to that side, rather than being anchored to the parent nodes origin)
  - [ ] Export/Import support for [Tiled](https://www.mapeditor.org/)
- - [ ] Export to polygon mesh, uv map, texture atlas, and collision mesh; for importing into other software - primarily game engines like Unity3D.
- - [ ] Export to optimized polygon mesh, uv map, megatexture, and collision mesh; similar to the above feature except optimal for large maps that would otherwise potentially be performance intensive - trading off VRAM to load the megatexture for rendering speed.
+ - [ ] Export to optimized polygon mesh, uv map, texture atlas, and collision mesh; for importing into other software - primarily game engines like Unity3D.
