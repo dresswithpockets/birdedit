@@ -18,7 +18,7 @@ make
 ## Features
 
  - [ ] Tile, line and block tiling brushes.
- - [ ] Tile palettes with terrain data that describes the adjacent bitmap that maps to each tile type.
+ - [ ] Tile palettes with terrain data; which describes groups of bitmaps of adjacent tiles, where each group maps to a specific tile in the palette.
  - [ ] Hierarchical sceen graph for determining render precedence and parenting.
  - [ ] Resizable and repositional nodes on the sceen graph.
  - [ ] Node latching; nodes latch onto sides of a parent node (child node latches onto a side of parent node and is always anchored to that side, rather than being anchored to the parent nodes origin)
