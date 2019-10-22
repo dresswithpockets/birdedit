@@ -343,7 +343,7 @@ bool GuiCheckIconPixel(int iconId, int x, int y);    // Check icon pixel value
 #if defined(RICONS_IMPLEMENTATION)
 
 #if !defined(RICONS_STANDALONE)
-    #include "raylib.h"         // Required for: Icons drawing function: DrawRectangle()
+#include "raylib.h"         // Required for: Icons drawing function: DrawRectangle()
 #endif
 
 #include <stdio.h>              // Required for: fopen(), fclose()...
@@ -698,7 +698,7 @@ char **GuiLoadIcons(const char *fileName, bool loadIconsName)
 // Draw selected icon using rectangles pixel-by-pixel
 void GuiDrawIcon(int iconId, Vector2 position, int pixelSize, Color color)
 {
-    #define BIT_CHECK(a,b) ((a) & (1<<(b)))
+#define BIT_CHECK(a,b) ((a) & (1<<(b)))
 
     for (int i = 0, y = 0; i < RICON_SIZE*RICON_SIZE/32; i++)
     {
@@ -706,9 +706,9 @@ void GuiDrawIcon(int iconId, Vector2 position, int pixelSize, Color color)
         {
             if (BIT_CHECK(guiIcons[iconId*RICON_DATA_ELEMENTS + i], k))
             {
-            #if !defined(RICONS_STANDALONE)
+#if !defined(RICONS_STANDALONE)
                 DrawRectangle(position.x + (k%RICON_SIZE)*pixelSize, position.y + y*pixelSize, pixelSize, pixelSize, color);
-            #endif
+#endif
             }
 
             if ((k == 15) || (k == 31)) y++;
@@ -738,7 +738,7 @@ void GuiSetIconData(int iconId, unsigned int *data)
 // Set icon pixel value
 void GuiSetIconPixel(int iconId, int x, int y)
 {
-    #define BIT_SET(a,b)   ((a) |= (1<<(b)))
+#define BIT_SET(a,b)   ((a) |= (1<<(b)))
 
     // This logic works for any RICON_SIZE pixels icons,
     // For example, in case of 16x16 pixels, every 2 lines fit in one unsigned int data element
@@ -748,7 +748,7 @@ void GuiSetIconPixel(int iconId, int x, int y)
 // Clear icon pixel value
 void GuiClearIconPixel(int iconId, int x, int y)
 {
-    #define BIT_CLEAR(a,b) ((a) &= ~((1)<<(b)))
+#define BIT_CLEAR(a,b) ((a) &= ~((1)<<(b)))
 
     // This logic works for any RICON_SIZE pixels icons,
     // For example, in case of 16x16 pixels, every 2 lines fit in one unsigned int data element
@@ -758,7 +758,7 @@ void GuiClearIconPixel(int iconId, int x, int y)
 // Check icon pixel value
 bool GuiCheckIconPixel(int iconId, int x, int y)
 {
-    #define BIT_CHECK(a,b) ((a) & (1<<(b)))
+#define BIT_CHECK(a,b) ((a) & (1<<(b)))
 
     return (BIT_CHECK(guiIcons[iconId*8 + y/2], x + (y%2*16)));
 }
