@@ -31,7 +31,7 @@ endif()
 
 # This is the main part:
 
-add_executable(${PROJECT_NAME} main.c gui.c app.c)
+add_executable(${PROJECT_NAME} main.c gui.c app.c editor.c)
 #set(raylib_VERBOSE 1)
 target_link_libraries(${PROJECT_NAME} raylib)
 
