@@ -1,3 +1,7 @@
+# Archived
+
+Use https://github.com/deepnight/ldtk instead (its REALLY good).
+
 # birdedit
 A tilemap editor that focuses on simplicity and ease of use. Less is more.
 
